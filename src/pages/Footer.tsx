@@ -17,6 +17,7 @@ const Footer: React.FC = () => {
         sx={{
           fontWeight: "bold",
           mb: 4, 
+          px: 4,
         }}
       >
         Pronto para defender seus direitos?

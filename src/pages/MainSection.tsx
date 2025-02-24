@@ -26,12 +26,18 @@ const MainSection: React.FC = () => {
           Assessoria Jurídica
         </Typography>
 
-        <Typography variant="h1">Defenda Seus Direitos no Trânsito</Typography>
+        <Typography
+          sx={{
+            typography: { xs: "h2", md: "h1" }, // Reduz o tamanho do título em telas menores
+          }}
+        >
+          Defenda Seus Direitos no Trânsito
+        </Typography>
 
         <Typography
-          variant="h3"
           sx={{
-            maxWidth: "750px",
+            typography: { xs: "h6", md: "h3" }, // Reduz o tamanho do subtítulo em telas menores
+            maxWidth: "700px",
             color: "#6B7280",
           }}
         >
