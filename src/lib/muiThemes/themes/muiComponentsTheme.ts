@@ -112,14 +112,15 @@ export const muiComponents = createTheme({
     MuiButton: {
       styleOverrides: {
         root: {
-          backgroundColor: "#4b40DE",
+          backgroundColor: "#34D399",
           borderRadius: "7px",
           fontSize: "14px",
           letterSpacing: "0.01px",
+          fontWeight: "bold",
           transition:
             "transform 0.2s ease-in-out, background-color 0.2s ease-in-out",
           "&:hover": {
-            backgroundColor: "#5c53f0",
+            backgroundColor: "#A7F3D0",
           },
           whiteSpace: "nowrap",
           textTransform: "none",
