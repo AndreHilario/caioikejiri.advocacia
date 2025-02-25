@@ -18,7 +18,7 @@ const MainSection: React.FC = () => {
     slidesToShow: 1, // Quantidade de slides visíveis por vez
     slidesToScroll: 1, // Quantidade de slides a serem percorridos por vez
     autoplay: true, // Inicia o carrossel automaticamente
-    autoplaySpeed: 5000, // Intervalo entre os slides em milissegundos
+    autoplaySpeed: 3000, // Intervalo entre os slides em milissegundos
     pauseOnHover: true, // Pausa o carrossel ao passar o mouse
     arrows: false, // Oculta as setas de navegação
     adaptiveHeight: true, // Ajusta a altura do carrossel ao conteúdo
