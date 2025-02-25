@@ -48,13 +48,15 @@ const Footer: React.FC = () => {
       />
 
       <Stack
-        direction="row"
+        direction={{ xs: "column", sm: "row" }}
         justifyContent="space-between"
         alignItems="center"
         sx={{
           px: 5,
           pb: 2,
           flexWrap: "wrap",
+          textAlign: { xs: "center", sm: "left" },
+          gap: { xs: 1, sm: 0 },
         }}
       >
         <Typography variant="caption" sx={{ color: "#A0A0A0" }}>
