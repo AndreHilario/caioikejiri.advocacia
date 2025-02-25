@@ -7,24 +7,24 @@ import ShieldIcon from "@mui/icons-material/Shield";
 
 const cardsData = [
   {
-    icon: <CheckIcon sx={{ fontSize: 36, color: "#4b40DE" }} />,
+    icon: <CheckIcon sx={{ fontSize: 36, color: "#34D399" }} />,
     title: "Análise Completa",
     description:
       "Avaliação detalhada do contexto fático para identificar eventuais irregularidades na autuação.",
   },
   {
-    icon: <PersonIcon sx={{ fontSize: 36, color: "#4b40DE" }} />,
+    icon: <PersonIcon sx={{ fontSize: 36, color: "#34D399" }} />,
     title: "Atendimento Personalizado",
     description: "Soluções ajustadas às necessidades específicas do seu caso.",
   },
   {
-    icon: <AccessTimeIcon sx={{ fontSize: 36, color: "#4b40DE" }} />,
+    icon: <AccessTimeIcon sx={{ fontSize: 36, color: "#34D399" }} />,
     title: "Agilidade no Contato",
     description:
       "Facilidade para obter uma avaliação rápida sem a burocracia de formulários.",
   },
   {
-    icon: <ShieldIcon sx={{ fontSize: 36, color: "#4b40DE" }} />,
+    icon: <ShieldIcon sx={{ fontSize: 36, color: "#34D399" }} />,
     title: "Transparência",
     description:
       "Todo serviço é prestado de forma transparente para maior segurança dos seus interesses.",
@@ -36,8 +36,9 @@ const FeaturesSection: React.FC = () => {
     <Box
       sx={{
         backgroundColor: "white",
-        py: 8,
+        py: 10,
         px: 3,
+        minHeight: "80vh",
       }}
     >
       <Grid container spacing={4} sx={{ maxWidth: { sm: "1200px" }, mx: { sm: "auto" } }}>
@@ -65,12 +66,13 @@ const FeaturesSection: React.FC = () => {
                   transform: "translateY(-10px)",
                   boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
                 },
-                width: "100%", // Assegura que o Box use 100% do espaço disponível
+                width: "100%",
               }}
             >
               <Box
                 sx={{
                   mb: 2,
+                  color: "#34D399"
                 }}
               >
                 {card.icon}

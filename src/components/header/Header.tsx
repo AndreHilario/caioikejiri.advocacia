@@ -4,7 +4,7 @@ import { Stack, Button, Typography } from "@mui/material";
 const Header: React.FC = () => {
   return (
     <div
-      className="bg-white py-2 px-2 border-b border-gray-200"
+      className="bg-black py-2 px-2 border-b-2 border-b-green-300"
       style={{
         position: "sticky",
         top: 0,
@@ -16,7 +16,7 @@ const Header: React.FC = () => {
         alignItems="center"
         justifyContent="space-between"
         className="max-w-7xl mx-auto py-1"
-        color="#4b40DE"
+        color="#FFFFFF"
       >
         <Typography variant="h6">Caio Ikejiri | Advogado</Typography>
 
