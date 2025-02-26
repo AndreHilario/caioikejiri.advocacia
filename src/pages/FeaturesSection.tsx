@@ -38,7 +38,6 @@ const FeaturesSection: React.FC = () => {
         backgroundColor: "white",
         py: 10,
         px: 3,
-        minHeight: "80vh",
       }}
     >
       <Grid container spacing={4}>
@@ -51,6 +50,7 @@ const FeaturesSection: React.FC = () => {
             sx={{
               display: "flex",
               justifyContent: "center",
+              alignItems: "center"
             }}
           >
             <Box
