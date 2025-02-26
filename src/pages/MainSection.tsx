@@ -5,12 +5,14 @@ import Slider from "react-slick";
 import carrossel1 from "../assets/carrossel1.png";
 import carrossel2 from "../assets/carrossel2.jpg";
 import carrossel3 from "../assets/carrossel3.jpg";
+import carrossel1HighRes from "../assets/carrossel1.png"; // Considerar estas versões de alta resolução
+import carrossel2HighRes from "../assets/carrossel2.jpg";
+import carrossel3HighRes from "../assets/carrossel3.jpg";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const MainSection: React.FC = () => {
   const slideDuration = 500;
-
   const settings = {
     dots: false,
     infinite: true,
@@ -79,39 +81,50 @@ const MainSection: React.FC = () => {
               <div>
                 <img
                   src={carrossel1}
+                  srcSet={`${carrossel1} 1x, ${carrossel1HighRes} 2x`}
                   alt="Depoimento Cliente 1"
                   style={{
                     width: "100%",
                     borderRadius: "8px",
                     objectFit: "cover",
-                    height: "60vh", // Definindo uma altura fixa
+                    height: "60vh",
                   }}
                 />
-                <Typography></Typography>
+                <Typography variant="body1" style={{ visibility: "hidden" }}>
+                  Espaço reservado
+                </Typography>
               </div>
               <div>
                 <img
                   src={carrossel2}
+                  srcSet={`${carrossel2} 1x, ${carrossel2HighRes} 2x`}
                   alt="Caso de Sucesso 2"
                   style={{
                     width: "100%",
                     borderRadius: "8px",
                     objectFit: "cover",
-                    height: "60vh", // Definindo uma altura fixa
+                    height: "60vh",
                   }}
                 />
+                <Typography variant="body1" style={{ visibility: "hidden" }}>
+                  Espaço reservado
+                </Typography>
               </div>
               <div>
                 <img
                   src={carrossel3}
+                  srcSet={`${carrossel3} 1x, ${carrossel3HighRes} 2x`}
                   alt="Serviços Especializados 3"
                   style={{
                     width: "100%",
                     borderRadius: "8px",
                     objectFit: "cover",
-                    height: "60vh", // Definindo uma altura fixa
+                    height: "60vh",
                   }}
                 />
+                <Typography variant="body1" style={{ visibility: "hidden" }}>
+                  Espaço reservado
+                </Typography>
               </div>
             </Slider>
           </Box>
