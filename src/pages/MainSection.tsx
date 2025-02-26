@@ -74,12 +74,12 @@ const MainSectionDesktop: React.FC = () => {
           item
           xs={12}
           md={6}
-          className="flex flex-col justify-between"
-          sx={{ height: "100%", padding: 5 }}
+          className="flex flex-col justify-between items-center"
+          sx={{ height: "100%", padding: 4, margin: "0 auto" }}
         >
           <Box
             className="flex flex-col justify-between items-center"
-            sx={{ height: "100%" }}
+            sx={{ height: "100%", margin: "0 auto" }}
           >
             <Slide direction="down" in={true} timeout={slideDuration * 2}>
               <Typography
@@ -113,7 +113,6 @@ const MainSectionDesktop: React.FC = () => {
                 <Typography
                   sx={{
                     typography: "h3",
-                    maxWidth: "700px",
                     color: "#6B7280",
                     textAlign: "center",
                     mt: 4

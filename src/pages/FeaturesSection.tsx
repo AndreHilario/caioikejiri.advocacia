@@ -41,7 +41,7 @@ const FeaturesSection: React.FC = () => {
         minHeight: "80vh",
       }}
     >
-      <Grid container spacing={4} sx={{ maxWidth: { sm: "1200px" }, mx: { sm: "auto" } }}>
+      <Grid container spacing={4}>
         {cardsData.map((card, index) => (
           <Grid
             item
