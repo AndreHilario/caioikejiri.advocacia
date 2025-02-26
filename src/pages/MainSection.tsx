@@ -1,26 +1,37 @@
 import React from "react";
-import { Stack, Button, Typography, Box, Slide } from "@mui/material";
+import {
+  Stack,
+  Button,
+  Typography,
+  Box,
+  Slide,
+  useTheme,
+  useMediaQuery,
+} from "@mui/material";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import Slider from "react-slick";
 import carrossel1 from "../assets/carrossel1.png";
 import carrossel2 from "../assets/carrossel2.jpg";
 import carrossel3 from "../assets/carrossel3.jpg";
-import carrossel1HighRes from "../assets/carrossel1.png"; // Considerar estas versões de alta resolução
+import carrossel1HighRes from "../assets/carrossel1.png";
 import carrossel2HighRes from "../assets/carrossel2.jpg";
 import carrossel3HighRes from "../assets/carrossel3.jpg";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const MainSection: React.FC = () => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   const slideDuration = 500;
+
   const settings = {
     dots: false,
     infinite: true,
-    speed: 3000,
+    speed: 4000,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 5000,
     pauseOnHover: true,
     arrows: false,
     adaptiveHeight: true,
@@ -31,7 +42,7 @@ const MainSection: React.FC = () => {
       sx={{
         backgroundColor: "white",
         textAlign: "center",
-        py: 5,
+        py: 2,
         px: 2,
         minHeight: "70vh",
       }}
@@ -76,56 +87,32 @@ const MainSection: React.FC = () => {
         </Slide>
 
         <Slide direction="right" in={true} timeout={slideDuration * 3}>
-          <Box sx={{ maxWidth: "100%", margin: "auto", mt: 5 }}>
+          <Box sx={{ maxWidth: isMobile ? "95%" : "50%", margin: "auto", mt: 5 }}>
             <Slider {...settings}>
-              <div>
-                <img
-                  src={carrossel1}
-                  srcSet={`${carrossel1} 1x, ${carrossel1HighRes} 2x`}
-                  alt="Depoimento Cliente 1"
-                  style={{
-                    width: "100%",
-                    borderRadius: "8px",
-                    objectFit: "cover",
-                    height: "60vh",
-                  }}
-                />
-                <Typography variant="body1" style={{ visibility: "hidden" }}>
-                  Espaço reservado
-                </Typography>
-              </div>
-              <div>
-                <img
-                  src={carrossel2}
-                  srcSet={`${carrossel2} 1x, ${carrossel2HighRes} 2x`}
-                  alt="Caso de Sucesso 2"
-                  style={{
-                    width: "100%",
-                    borderRadius: "8px",
-                    objectFit: "cover",
-                    height: "60vh",
-                  }}
-                />
-                <Typography variant="body1" style={{ visibility: "hidden" }}>
-                  Espaço reservado
-                </Typography>
-              </div>
-              <div>
-                <img
-                  src={carrossel3}
-                  srcSet={`${carrossel3} 1x, ${carrossel3HighRes} 2x`}
-                  alt="Serviços Especializados 3"
-                  style={{
-                    width: "100%",
-                    borderRadius: "8px",
-                    objectFit: "cover",
-                    height: "60vh",
-                  }}
-                />
-                <Typography variant="body1" style={{ visibility: "hidden" }}>
-                  Espaço reservado
-                </Typography>
-              </div>
+              {[carrossel1, carrossel2, carrossel3].map((image, index) => (
+                <div
+                  key={index}
+                  style={{ display: "flex", justifyContent: "center" }}
+                >
+                  <img
+                    src={image}
+                    srcSet={`${image} 1x, ${
+                      index === 0
+                        ? carrossel1HighRes
+                        : index === 1
+                        ? carrossel2HighRes
+                        : carrossel3HighRes
+                    } 2x`}
+                    alt={`Imagem ${index + 1}`}
+                    style={{
+                      width: isMobile ? "100%" : "100%",
+                      borderRadius: "8px",
+                      objectFit: "cover",
+                      height: "50vh",
+                    }}
+                  />
+                </div>
+              ))}
             </Slider>
           </Box>
         </Slide>
