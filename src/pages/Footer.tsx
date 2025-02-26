@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
       {/* Imagem à direita */}
       <Box
         sx={{
-          width: { xs: "100%", sm: "50%" }, // 100% no mobile, 50% no desktop
+          width: { xs: "100%", sm: "30%" }, // 100% no mobile, 50% no desktop
           height: { xs: "60vh", sm: "65vh" }, // Define a altura da imagem
           backgroundImage: `url(${footerImage})`,
           backgroundSize: "cover",
@@ -32,7 +32,7 @@ const Footer: React.FC = () => {
       />
 
       {/* Conteúdo à esquerda (botão e texto) */}
-      <Box sx={{ width: { xs: "100%", sm: "50%" }, textAlign: "center" }}>
+      <Box sx={{ width: { xs: "100%", sm: "70%" }, textAlign: "center" }}>
         <Typography
           variant="h2"
           sx={{

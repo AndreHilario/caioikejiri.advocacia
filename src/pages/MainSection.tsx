@@ -12,16 +12,16 @@ const MainSection: React.FC = () => {
   const slideDuration = 500;
 
   const settings = {
-    dots: false, // Mostra os pontos de navegação
-    infinite: true, // Permite que o carrossel seja infinito
-    speed: 3000, // Velocidade da transição em milissegundos
-    slidesToShow: 1, // Quantidade de slides visíveis por vez
-    slidesToScroll: 1, // Quantidade de slides a serem percorridos por vez
-    autoplay: true, // Inicia o carrossel automaticamente
-    autoplaySpeed: 3000, // Intervalo entre os slides em milissegundos
-    pauseOnHover: true, // Pausa o carrossel ao passar o mouse
-    arrows: false, // Oculta as setas de navegação
-    adaptiveHeight: true, // Ajusta a altura do carrossel ao conteúdo
+    dots: false,
+    infinite: true,
+    speed: 3000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    pauseOnHover: true,
+    arrows: false,
+    adaptiveHeight: true,
   };
 
   return (
@@ -59,6 +59,7 @@ const MainSection: React.FC = () => {
             Defenda Seus Direitos no Trânsito
           </Typography>
         </Slide>
+
         <Slide direction="left" in={true} timeout={slideDuration * 3}>
           <Typography
             sx={{
@@ -71,8 +72,9 @@ const MainSection: React.FC = () => {
             da sua CNH
           </Typography>
         </Slide>
+
         <Slide direction="right" in={true} timeout={slideDuration * 3}>
-          <Box sx={{ maxWidth: "90%", margin: "auto", mt: 5 }}>
+          <Box sx={{ maxWidth: "100%", margin: "auto", mt: 5 }}>
             <Slider {...settings}>
               <div>
                 <img
@@ -82,9 +84,10 @@ const MainSection: React.FC = () => {
                     width: "100%",
                     borderRadius: "8px",
                     objectFit: "cover",
-                    height: "500px",
+                    height: "60vh", // Definindo uma altura fixa
                   }}
                 />
+                <Typography></Typography>
               </div>
               <div>
                 <img
@@ -94,7 +97,7 @@ const MainSection: React.FC = () => {
                     width: "100%",
                     borderRadius: "8px",
                     objectFit: "cover",
-                    height: "500px",
+                    height: "60vh", // Definindo uma altura fixa
                   }}
                 />
               </div>
@@ -106,13 +109,14 @@ const MainSection: React.FC = () => {
                     width: "100%",
                     borderRadius: "8px",
                     objectFit: "cover",
-                    height: "500px",
+                    height: "60vh", // Definindo uma altura fixa
                   }}
                 />
               </div>
             </Slider>
           </Box>
         </Slide>
+
         <Slide direction="up" in={true} timeout={slideDuration * 3}>
           <Button
             variant="contained"
