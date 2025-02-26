@@ -18,7 +18,14 @@ const ExplainSection: React.FC = () => {
         minHeight: "90vh",
       }}
     >
-      <Grid item xs={12} md={6} sx={{ py: 8 }}>
+      <Grid
+        item
+        xs={12}
+        md={6}
+        sx={{ py: 8 }}
+        display={"flex"}
+        flexDirection={"column"}
+      >
         <Typography
           variant="h2"
           sx={{
@@ -32,10 +39,13 @@ const ExplainSection: React.FC = () => {
         </Typography>
 
         <Stack
-          spacing={8}
+          spacing={2}
           sx={{
             px: 2,
             textAlign: "left",
+            flexGrow: 1, // Faz com que ocupe todo o espaço disponível
+            justifyContent: "space-between", // Distribui os itens uniformemente
+            height: "100%", // Garante que use toda a altura disponível
           }}
         >
           <Stack direction="row" spacing={2} alignItems="center">
