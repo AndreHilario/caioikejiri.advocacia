@@ -3,8 +3,8 @@ import { Stack, Button, Typography, Box, Slide } from "@mui/material";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import Slider from "react-slick";
 import carrossel1 from "../assets/carrossel1.png";
-import image1 from "../assets/image1.jpg";
-import image2 from "../assets/image2.png";
+import carrossel2 from "../assets/carrossel2.jpg";
+import carrossel3 from "../assets/carrossel3.jpg";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -85,14 +85,10 @@ const MainSection: React.FC = () => {
                     height: "500px",
                   }}
                 />
-                <Typography variant="body1" sx={{ mt: 2, color: "#6B7280" }}>
-                  "Excelente serviço! Conseguiu reverter minha multa e evitar a
-                  suspensão da CNH."
-                </Typography>
               </div>
               <div>
                 <img
-                  src={image1}
+                  src={carrossel2}
                   alt="Caso de Sucesso 2"
                   style={{
                     width: "100%",
@@ -101,14 +97,10 @@ const MainSection: React.FC = () => {
                     height: "500px",
                   }}
                 />
-                <Typography variant="body1" sx={{ mt: 2, color: "#6B7280" }}>
-                  "Muito atencioso e profissional. Recomendo a todos que
-                  precisam de ajuda com questões de trânsito."
-                </Typography>
               </div>
               <div>
                 <img
-                  src={image2}
+                  src={carrossel3}
                   alt="Serviços Especializados 3"
                   style={{
                     width: "100%",
@@ -117,10 +109,6 @@ const MainSection: React.FC = () => {
                     height: "500px",
                   }}
                 />
-                <Typography variant="body1" sx={{ mt: 2, color: "#6B7280" }}>
-                  "Com a assessoria, consegui entender meus direitos e tomar as
-                  melhores decisões. Muito obrigado!"
-                </Typography>
               </div>
             </Slider>
           </Box>
