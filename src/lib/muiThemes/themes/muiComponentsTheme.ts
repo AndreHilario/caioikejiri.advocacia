@@ -40,7 +40,6 @@ export const muiComponents = createTheme({
         root: {
           color: "#FFFFFF",
           minHeight: "48px",
-          // borderBottom: "2px solid #000",
           marginBottom: "15px",
         },
         indicator: {
@@ -141,6 +140,27 @@ export const muiComponents = createTheme({
           borderRadius: 0,
           backgroundColor: "#193B6E",
           color: "#fafafa",
+        },
+      },
+    },
+    MuiDialog: {
+      styleOverrides: {
+        root: {
+          zIndex: 1300, 
+        },
+        paper: {
+          borderRadius: "12px", 
+          color: "#000",
+          boxShadow: "0px 8px 16px rgba(255, 255, 255, 0.1)",
+          padding: "8px", 
+          backgroundColor: "#DEFEEF", 
+          overflow: "hidden",
+        },
+        paperWidthSm: {
+          maxWidth: "600px", 
+        },
+        paperFullWidth: {
+          padding: "24px", 
         },
       },
     },
