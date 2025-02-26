@@ -1,6 +1,7 @@
 import React from "react";
-import { Box, Button, Typography, Stack, Divider } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
+import footerImage from "../assets/footerImage.jpg"; // Importa a imagem
 
 const Footer: React.FC = () => {
   return (
@@ -9,64 +10,55 @@ const Footer: React.FC = () => {
         backgroundColor: "#000",
         color: "white",
         textAlign: "center",
-        pt: 6,
         position: "relative",
+        display: "flex",
+        flexDirection: { xs: "column-reverse", sm: "row-reverse" }, // Inverte a ordem: imagem à direita
+        alignItems: "center",
+        justifyContent: "space-between",
+        height: { xs: "60vh", sm: "65vh" }, // Altura responsiva
       }}
     >
-      <Typography
-        variant="h2"
+      {/* Imagem à direita */}
+      <Box
         sx={{
-          fontWeight: "bold",
-          mb: 4,
-          px: 4,
-        }}
-      >
-        Pronto para defender seus direitos?
-      </Typography>
-
-      <Button
-        variant="contained"
-        href="https://wa.me/5512997402160"
-        rel="noopener noreferrer"
-        startIcon={<ChatBubbleOutlineIcon />}
-        sx={{
-          transition: "transform 0.2s ease-in-out",
-          padding: "10px 32px",
-          mb: 3,
-        }}
-      >
-        Falar agora no WhatsApp
-      </Button>
-
-      <Divider
-        sx={{
-          backgroundColor: "#34D399",
-          my: 2,
-          width: "95%",
-          mx: "auto",
+          width: { xs: "100%", sm: "50%" }, // 100% no mobile, 50% no desktop
+          height: { xs: "60vh", sm: "65vh" }, // Define a altura da imagem
+          backgroundImage: `url(${footerImage})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          borderRadius: "10px"
         }}
       />
 
-      <Stack
-        direction={{ xs: "column", sm: "row" }}
-        justifyContent="space-between"
-        alignItems="center"
-        sx={{
-          px: 5,
-          pb: 2,
-          flexWrap: "wrap",
-          textAlign: { xs: "center", sm: "left" },
-          gap: { xs: 1, sm: 0 },
-        }}
-      >
-        <Typography variant="caption" sx={{ color: "#A0A0A0" }}>
-          © 2025 AndreHilario | Todos os direitos reservados
+      {/* Conteúdo à esquerda (botão e texto) */}
+      <Box sx={{ width: { xs: "100%", sm: "50%" }, textAlign: "center" }}>
+        <Typography
+          variant="h2"
+          sx={{
+            fontWeight: "bold",
+            mb: 4,
+            px: 4,
+            mt: { xs: 4, sm: 8 },
+          }}
+        >
+          Pronto para defender seus direitos?
         </Typography>
 
-        <Typography variant="caption" sx={{ color: "#A0A0A0" }}>
-          AndreHilario
-        </Typography>
-      </Stack>
+        <Button
+          variant="contained"
+          href="https://wa.me/5512997402160"
+          rel="noopener noreferrer"
+          startIcon={<ChatBubbleOutlineIcon style={{ fontSize: 15, marginRight: 2 }} />}
+          sx={{
+            transition: "transform 0.2s ease-in-out",
+            padding: "10px 32px",
+            mb: 3,
+          }}
+        >
+          Falar agora no WhatsApp
+        </Button>
+      </Box>
     </Box>
   );
 };
