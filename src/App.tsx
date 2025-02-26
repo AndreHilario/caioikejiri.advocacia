@@ -20,6 +20,7 @@ function App() {
             backgroundColor: "#000",
             py: 2,
             px: 2,
+            width: "100%"
           }}
         >
           <Divider
