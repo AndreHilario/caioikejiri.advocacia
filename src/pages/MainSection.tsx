@@ -5,8 +5,9 @@ import {
   Typography,
   Box,
   Slide,
-  useTheme,
   useMediaQuery,
+  Theme,
+  Grid,
 } from "@mui/material";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import Slider from "react-slick";
@@ -19,9 +20,132 @@ import carrossel3HighRes from "../assets/carrossel3.jpg";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const MainSection: React.FC = () => {
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+const MainSectionDesktop: React.FC = () => {
+  const slideDuration = 500;
+
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 4000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    pauseOnHover: true,
+    arrows: false,
+    adaptiveHeight: true,
+  };
+
+  return (
+    <Box className="bg-white" sx={{ height: "92vh", overflow: "hidden" }}>
+      <Grid container spacing={0} sx={{ height: "100%" }}>
+        <Grid item xs={12} md={6} className="flex justify-center">
+          <Box className="w-full h-full">
+            <Slider {...settings}>
+              {[carrossel1, carrossel2, carrossel3].map((image, index) => (
+                <div
+                  key={index}
+                  className="flex justify-center items-center h-full"
+                >
+                  <img
+                    src={image}
+                    srcSet={`${image} 1x, ${
+                      index === 0
+                        ? carrossel1HighRes
+                        : index === 1
+                        ? carrossel2HighRes
+                        : carrossel3HighRes
+                    } 2x`}
+                    alt={`Imagem ${index + 1}`}
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      maxHeight: "92vh",
+                      objectFit: "cover",
+                      borderRadius: "4px",
+                    }}
+                  />
+                </div>
+              ))}
+            </Slider>
+          </Box>
+        </Grid>
+        <Grid
+          item
+          xs={12}
+          md={6}
+          className="flex flex-col justify-between"
+          sx={{ height: "100%", padding: 5 }}
+        >
+          <Box
+            className="flex flex-col justify-between items-center"
+            sx={{ height: "100%" }}
+          >
+            <Slide direction="down" in={true} timeout={slideDuration * 2}>
+              <Typography
+                variant="button"
+                sx={{
+                  backgroundColor: "#34D399",
+                  color: "#FFFFFF",
+                  p: "4px 12px",
+                  borderRadius: "16px",
+                  textTransform: "none",
+                  width: "40%",
+                  textAlign: "center",
+                }}
+              >
+                Assessoria Jurídica
+              </Typography>
+            </Slide>
+            <Box>
+              <Slide direction="down" in={true} timeout={slideDuration * 2}>
+                <Typography
+                  sx={{
+                    typography: "h1",
+                    textAlign: "center",
+                  }}
+                >
+                  Defenda Seus Direitos no Trânsito
+                </Typography>
+              </Slide>
+
+              <Slide direction="left" in={true} timeout={slideDuration * 3}>
+                <Typography
+                  sx={{
+                    typography: "h3",
+                    maxWidth: "700px",
+                    color: "#6B7280",
+                    textAlign: "center",
+                    mt: 4
+                  }}
+                >
+                  Conteste multas e defenda-se em processos de suspensão ou
+                  cassação da sua CNH
+                </Typography>
+              </Slide>
+            </Box>
+            <Slide direction="up" in={true} timeout={slideDuration * 3}>
+              <Button
+                variant="contained"
+                href="https://wa.me/5512997402160"
+                rel="noopener noreferrer"
+                startIcon={<WhatsAppIcon />}
+                sx={{
+                  transition: "transform 0.2s ease-in-out",
+                  padding: "8px 32px",
+                }}
+              >
+                Falar agora no WhatsApp
+              </Button>
+            </Slide>
+          </Box>
+        </Grid>
+      </Grid>
+    </Box>
+  );
+};
+
+const MainSectionMobile: React.FC = () => {
   const slideDuration = 500;
 
   const settings = {
@@ -87,7 +211,7 @@ const MainSection: React.FC = () => {
         </Slide>
 
         <Slide direction="right" in={true} timeout={slideDuration * 3}>
-          <Box sx={{ maxWidth: isMobile ? "95%" : "50%", margin: "auto", mt: 5 }}>
+          <Box sx={{ maxWidth: "95%", margin: "auto", mt: 5 }}>
             <Slider {...settings}>
               {[carrossel1, carrossel2, carrossel3].map((image, index) => (
                 <div
@@ -105,12 +229,13 @@ const MainSection: React.FC = () => {
                     } 2x`}
                     alt={`Imagem ${index + 1}`}
                     style={{
-                      width: isMobile ? "100%" : "100%",
+                      width: "100%",
                       borderRadius: "8px",
                       objectFit: "cover",
                       height: "50vh",
                     }}
                   />
+                  <Typography overflow={"hidden"}>. . .</Typography>
                 </div>
               ))}
             </Slider>
@@ -134,6 +259,13 @@ const MainSection: React.FC = () => {
       </Stack>
     </Box>
   );
+};
+
+const MainSection: React.FC = () => {
+  const isMobile = useMediaQuery((theme: Theme) =>
+    theme.breakpoints.down("sm")
+  );
+  return isMobile ? <MainSectionMobile /> : <MainSectionDesktop />;
 };
 
 export default MainSection;

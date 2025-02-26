@@ -64,7 +64,7 @@ const FooterDesktop: React.FC = () => {
           </Button>
         </Box>
 
-        <Box sx={{ width: "100%", pb: 2 }}>
+        <Box sx={{ width: "100%", pb: 1 }}>
           <Divider
             sx={{
               backgroundColor: "#34D399",
