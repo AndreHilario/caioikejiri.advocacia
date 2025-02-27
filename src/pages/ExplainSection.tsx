@@ -1,12 +1,7 @@
 import React from "react";
 import { Typography, Stack, Grid } from "@mui/material";
-import {
-  CheckCircle,
-  AccessTime,
-  DocumentScanner,
-  HelpCenter,
-} from "@mui/icons-material";
-import image from "../assets/explainImage.png";
+import { CheckCircle, AccessTime, DocumentScanner } from "@mui/icons-material";
+import image from "../assets/explainImage.jpg";
 
 const ExplainSection: React.FC = () => {
   return (
@@ -15,7 +10,7 @@ const ExplainSection: React.FC = () => {
       sx={{
         backgroundColor: "#000",
         textAlign: "center",
-        minHeight: "90vh",
+        minHeight: "50vh",
       }}
     >
       <Grid
@@ -35,7 +30,7 @@ const ExplainSection: React.FC = () => {
             color: "#FFFFFF",
           }}
         >
-          Como Funciona
+          Como Funciona?
         </Typography>
 
         <Stack
@@ -43,9 +38,9 @@ const ExplainSection: React.FC = () => {
           sx={{
             px: 2,
             textAlign: "left",
-            flexGrow: 1, // Faz com que ocupe todo o espaço disponível
-            justifyContent: "space-between", // Distribui os itens uniformemente
-            height: "100%", // Garante que use toda a altura disponível
+            flexGrow: 1,
+            justifyContent: "space-around",
+            height: "100%",
           }}
         >
           <Stack direction="row" spacing={2} alignItems="center">
@@ -72,14 +67,6 @@ const ExplainSection: React.FC = () => {
               poderá ser anulada.
             </Typography>
           </Stack>
-
-          <Stack direction="row" spacing={2} alignItems="center">
-            <HelpCenter sx={{ color: "#34D399", fontSize: 30 }} />
-            <Typography variant="body1" sx={{ color: "#FFFFFF" }}>
-              A depender da situação, poderão ser solicitados outros documentos
-              para melhor analisar o caso.
-            </Typography>
-          </Stack>
         </Stack>
       </Grid>
 
@@ -94,7 +81,7 @@ const ExplainSection: React.FC = () => {
           alt="Ilustração de trânsito"
           style={{
             maxWidth: "100%",
-            height: "auto",
+            height: "100%",
             borderRadius: "8px",
           }}
         />

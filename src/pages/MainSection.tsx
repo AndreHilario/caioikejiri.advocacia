@@ -11,10 +11,10 @@ import {
 } from "@mui/material";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import Slider from "react-slick";
-import carrossel1 from "../assets/carrossel1.png";
+import carrossel1 from "../assets/carrossel1.jpg";
 import carrossel2 from "../assets/carrossel2.jpg";
 import carrossel3 from "../assets/carrossel3.jpg";
-import carrossel1HighRes from "../assets/carrossel1.png";
+import carrossel1HighRes from "../assets/carrossel1.jpg";
 import carrossel2HighRes from "../assets/carrossel2.jpg";
 import carrossel3HighRes from "../assets/carrossel3.jpg";
 import "slick-carousel/slick/slick.css";
@@ -31,7 +31,7 @@ const MainSectionDesktop: React.FC = () => {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 5000,
-    pauseOnHover: true,
+    pauseOnHover: false,
     arrows: false,
     adaptiveHeight: true,
   };
@@ -43,10 +43,7 @@ const MainSectionDesktop: React.FC = () => {
           <Box className="w-full h-full">
             <Slider {...settings}>
               {[carrossel1, carrossel2, carrossel3].map((image, index) => (
-                <div
-                  key={index}
-                  className="flex justify-center items-center h-full"
-                >
+                <div key={index} className="flex justify-center items-center">
                   <img
                     src={image}
                     srcSet={`${image} 1x, ${
@@ -59,8 +56,7 @@ const MainSectionDesktop: React.FC = () => {
                     alt={`Imagem ${index + 1}`}
                     style={{
                       width: "100%",
-                      height: "100%",
-                      maxHeight: "92vh",
+                      height: "92vh",
                       objectFit: "cover",
                       borderRadius: "4px",
                     }}
@@ -115,27 +111,43 @@ const MainSectionDesktop: React.FC = () => {
                     typography: "h3",
                     color: "#6B7280",
                     textAlign: "center",
-                    mt: 4
+                    mt: 4,
                   }}
                 >
-                  Conteste multas e defenda-se em processos de suspensão ou
-                  cassação da sua CNH
+                  Recorra de Multas e das Penalidades de Suspensão <br />e de Cassação
+                  da CNH
                 </Typography>
               </Slide>
             </Box>
             <Slide direction="up" in={true} timeout={slideDuration * 3}>
-              <Button
-                variant="contained"
-                href="https://wa.me/5512997402160"
-                rel="noopener noreferrer"
-                startIcon={<WhatsAppIcon />}
-                sx={{
-                  transition: "transform 0.2s ease-in-out",
-                  padding: "8px 32px",
-                }}
+              <Box
+                className="flex flex-col flex-end items-center"
+                sx={{ margin: "0 auto" }}
               >
-                Falar agora no WhatsApp
-              </Button>
+                <Button
+                  variant="contained"
+                  href="https://wa.me/5512997402160"
+                  rel="noopener noreferrer"
+                  startIcon={<WhatsAppIcon />}
+                  sx={{
+                    transition: "transform 0.2s ease-in-out",
+                    padding: "8px 32px",
+                  }}
+                >
+                  CTA - Entre em contato!
+                </Button>
+                <Typography
+                  sx={{
+                    typography: "h6",
+                    color: "#6B7280",
+                    textAlign: "center",
+                    mt: 2,
+                  }}
+                >
+                  Seu caso será analisado e você saberá se será possível
+                  recorrer.
+                </Typography>
+              </Box>
             </Slide>
           </Box>
         </Grid>
@@ -155,7 +167,7 @@ const MainSectionMobile: React.FC = () => {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 5000,
-    pauseOnHover: true,
+    pauseOnHover: false,
     arrows: false,
     adaptiveHeight: true,
   };
@@ -200,12 +212,11 @@ const MainSectionMobile: React.FC = () => {
           <Typography
             sx={{
               typography: { xs: "h6", md: "h3" },
-              maxWidth: "700px",
               color: "#6B7280",
             }}
           >
-            Conteste multas e defenda-se em processos de suspensão ou cassação
-            da sua CNH
+            Recorra de Multas e das Penalidades de Suspensão e de Cassação da
+            CNH
           </Typography>
         </Slide>
 
@@ -242,18 +253,33 @@ const MainSectionMobile: React.FC = () => {
         </Slide>
 
         <Slide direction="up" in={true} timeout={slideDuration * 3}>
-          <Button
-            variant="contained"
-            href="https://wa.me/5512997402160"
-            rel="noopener noreferrer"
-            startIcon={<WhatsAppIcon />}
-            sx={{
-              transition: "transform 0.2s ease-in-out",
-              padding: "8px 32px",
-            }}
+          <Box
+            className="flex flex-col flex-end items-center"
+            sx={{ margin: "0 auto" }}
           >
-            Falar agora no WhatsApp
-          </Button>
+            <Button
+              variant="contained"
+              href="https://wa.me/5512997402160"
+              rel="noopener noreferrer"
+              startIcon={<WhatsAppIcon />}
+              sx={{
+                transition: "transform 0.2s ease-in-out",
+                padding: "8px 32px",
+              }}
+            >
+              CTA - Entre em contato!
+            </Button>
+            <Typography
+              sx={{
+                typography: "h6",
+                color: "#6B7280",
+                textAlign: "center",
+                mt: 2,
+              }}
+            >
+              Seu caso será analisado e você saberá se será possível recorrer.
+            </Typography>
+          </Box>
         </Slide>
       </Stack>
     </Box>

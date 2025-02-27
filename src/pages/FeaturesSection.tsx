@@ -67,6 +67,7 @@ const FeaturesSection: React.FC = () => {
                   boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
                 },
                 width: "100%",
+                height: "25vh"
               }}
             >
               <Box
@@ -92,7 +93,6 @@ const FeaturesSection: React.FC = () => {
                 variant="body2"
                 sx={{
                   color: "#6B7280",
-                  lineHeight: 1.6,
                 }}
               >
                 {card.description}

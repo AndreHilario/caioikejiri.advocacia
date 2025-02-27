@@ -112,7 +112,7 @@ export const muiComponents = createTheme({
       styleOverrides: {
         root: {
           backgroundColor: "#34D399",
-          borderRadius: "7px",
+          borderRadius: "20px",
           fontSize: "14px",
           letterSpacing: "0.01px",
           fontWeight: "bold",
