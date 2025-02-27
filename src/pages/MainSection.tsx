@@ -134,7 +134,7 @@ const MainSectionDesktop: React.FC = () => {
                     padding: "8px 32px",
                   }}
                 >
-                  CTA - Entre em contato!
+                  Entre em contato!
                 </Button>
                 <Typography
                   sx={{
@@ -267,7 +267,7 @@ const MainSectionMobile: React.FC = () => {
                 padding: "8px 32px",
               }}
             >
-              CTA - Entre em contato!
+              Entre em contato!
             </Button>
             <Typography
               sx={{

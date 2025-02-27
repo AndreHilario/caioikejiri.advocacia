@@ -67,7 +67,7 @@ const FeaturesSection: React.FC = () => {
                   boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
                 },
                 width: "100%",
-                height: "25vh"
+                minHeight: "30vh"
               }}
             >
               <Box
