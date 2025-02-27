@@ -13,11 +13,8 @@ import CloseIcon from "@mui/icons-material/Close";
 import GavelIcon from "@mui/icons-material/Gavel";
 import DriveEtaIcon from "@mui/icons-material/DriveEta";
 import FileCopyIcon from "@mui/icons-material/FileCopy";
-import AssignmentIcon from "@mui/icons-material/Assignment";
-import DirectionsCarIcon from "@mui/icons-material/DirectionsCar";
-import BrokenImageIcon from "@mui/icons-material/BrokenImage";
 import ReportProblemIcon from "@mui/icons-material/ReportProblem";
-
+import CarCrashIcon from '@mui/icons-material/CarCrash';
 interface Service {
   id: number;
   title: string;
@@ -30,56 +27,35 @@ const services: Service[] = [
     id: 1,
     title: "Ações Indenizatórias",
     description:
-      "Equipe especializada em resolver com eficiência casos relacionados a ações indenizatórias no trânsito. Buscamos a justa compensação por danos materiais e morais decorrentes de acidentes e outras ocorrências.",
-    icon: <GavelIcon style={{ color: "#34D399", fontSize: "48px" }} />,
+      "Se você sofreu algum prejuízo material ou foi submetido a alguma situação que tenha ultrapassado o mero dissabor, poderá ser indenizado.",
+    icon: <GavelIcon style={{ color: "#FF0000", fontSize: "48px" }} />,
   },
   {
     id: 2,
-    title: "Suspensão do Direito de Dirigir",
+    title: "Indicação Judicial de Condutor",
     description:
-      "Defenda-se em processos de suspensão da CNH. Garantimos a melhor estratégia para você, analisando cada detalhe do processo administrativo para reverter a suspensão.",
-    icon: <DriveEtaIcon style={{ color: "#34D399", fontSize: "48px" }} />,
+      "Está sendo penalizado por infrações de trânsito que não cometeu, mas perdeu o prazo para recorrer? É possível solicitar a transferência da titularidade das infrações judicialmente!",
+    icon: <DriveEtaIcon style={{ color: "#FF0000", fontSize: "48px" }} />,
   },
   {
     id: 3,
-    title: "Transferência Judicial de Documentos",
+    title: "Acidentes de Trânsito",
     description:
-      "Apoio especializado em processos de transferência judicial de documentos, de forma rápida e segura. Resolvemos pendências burocráticas para garantir a regularização de seus documentos.",
-    icon: <FileCopyIcon style={{ color: "#34D399", fontSize: "48px" }} />,
+      "Além de pleitear danos materiais e morais, defendemos seus interesses na esfera criminal.",
+    icon: <CarCrashIcon style={{ color: "#FF0000", fontSize: "48px" }} />,
   },
   {
     id: 4,
-    title: "Ações Contra Seguradora",
+    title: "Inexigibilidade de ipva",
     description:
-      "Assessoria completa para problemas com seguradoras, garantindo seus direitos como consumidor. Atuamos em casos de negativa de cobertura, indenizações não pagas e outras disputas.",
-    icon: <AssignmentIcon style={{ color: "#34D399", fontSize: "48px" }} />,
+      "Se seu pedido de isenção foi injustamente negado ou se recebeu cobrança não estando mais na posse do veículo, o pedido poderá ser judicializado.",
+    icon: <FileCopyIcon style={{ color: "#FF0000", fontSize: "48px" }} />,
   },
   {
     id: 5,
-    title: "Ação Anulatória",
+    title: "Defesa em ações de busca e apreensão",
     description:
-      "Procedimentos legais para anular penalidades de trânsito aplicadas de maneira indevida. Analisamos a legalidade das multas e atuamos para cancelar autuações injustas.",
-    icon: <ReportProblemIcon style={{ color: "#FF0000", fontSize: "48px" }} />,
-  },
-  {
-    id: 6,
-    title: "Acidente de Trânsito",
-    description:
-      "Análise e defesa em processos de responsabilidade em acidentes de trânsito. Defendemos seus interesses em casos de colisões, atropelamentos e outras ocorrências.",
-    icon: <DirectionsCarIcon style={{ color: "#FF0000", fontSize: "48px" }} />,
-  },
-  {
-    id: 7,
-    title: "PPD (Permissão Para Dirigir)",
-    description:
-      "Auxílio para obtenção de benefícios e concessões especiais no trânsito para pessoas com deficiência. Facilitamos o acesso a isenções de impostos, vagas especiais e outros direitos.",
-    icon: <BrokenImageIcon style={{ color: "#FF0000", fontSize: "48px" }} />,
-  },
-  {
-    id: 8,
-    title: "Problemas de Carro",
-    description:
-      "Suporte para resolução legal de disputas envolvendo manutenção e venda de veículos. Atuamos em casos de vícios ocultos, defeitos de fabricação e descumprimento de contratos.",
+      "Se o banco ajuizou ação de busca e apreensão do veículo, saiba que é possível reverter a situação caso tenha havido alguma nulidade.",
     icon: <ReportProblemIcon style={{ color: "#FF0000", fontSize: "48px" }} />,
   },
 ];
@@ -95,29 +71,21 @@ const ServicesSection: React.FC = () => {
 
   const handleCloseDialog = () => {
     setOpenDialog(false);
-    setTimeout(() => setSelectedService(null), 300); 
+    setTimeout(() => setSelectedService(null), 300);
   };
 
   return (
     <Box
       sx={{
-        py: 6,
+        py: 4,
         px: 4,
         backgroundColor: "#A7F3D0",
         textAlign: "center",
-        minHeight: "90vh",
+        minHeight: "80vh",
       }}
     >
-      <Typography variant="h3" gutterBottom>
-        Serviços Personalizados para Você
-      </Typography>
-      <Typography
-        variant="body2"
-        sx={{ color: "gray", maxWidth: "600px", margin: "0 auto" }}
-        gutterBottom
-      >
-        Conheça mais sobre os serviços prestados e escolha o que atende melhor
-        às suas necessidades.
+      <Typography variant="h4" gutterBottom color="#000">
+        OUTROS SERVIÇOS PRESTADOS
       </Typography>
 
       <Grid container spacing={4} justifyContent="center" mt={1}>
@@ -153,6 +121,7 @@ const ServicesSection: React.FC = () => {
                   fontWeight: "bold",
                   color: "#FFFFFF",
                   textAlign: "center",
+                  textTransform: "uppercase",
                 }}
               >
                 {service.title}
