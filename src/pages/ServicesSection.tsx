@@ -79,12 +79,13 @@ const ServicesSection: React.FC = () => {
       sx={{
         py: 4,
         px: 4,
-        backgroundColor: "#A7F3D0",
+        background: "linear-gradient(to right, #000, #fff)",
+        // backgroundColor: "#E0F7FA",
         textAlign: "center",
         minHeight: "80vh",
       }}
     >
-      <Typography variant="h4" gutterBottom color="#000">
+      <Typography variant="h3" gutterBottom color="#0e0e0e">
         OUTROS SERVIÇOS PRESTADOS
       </Typography>
 
@@ -157,7 +158,7 @@ const ServicesSection: React.FC = () => {
             <DialogContent>
               <Typography
                 variant="body2"
-                sx={{ color: "#000", lineHeight: "1.6", mt: 1 }}
+                sx={{ color: "#000", lineHeight: "1.5", mt: 1 }}
               >
                 {selectedService.description}
               </Typography>

@@ -28,7 +28,7 @@ const Header: React.FC = () => {
             padding: "8px 16px",
           }}
         >
-          CTA - Entre em contato
+          Entre em contato
         </Button>
       </Stack>
     </div>

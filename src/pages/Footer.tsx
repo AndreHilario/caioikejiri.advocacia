@@ -46,7 +46,7 @@ const FooterDesktop: React.FC = () => {
       >
         <Stack
           direction="row"
-          spacing={6}
+          spacing={20}
           display={"flex"}
           justifyContent="center"
           alignItems="center"
@@ -82,7 +82,7 @@ const FooterDesktop: React.FC = () => {
                 mb: 2,
               }}
             >
-              CTA - Entre em contato!
+              Entre em contato!
             </Button>
           </Box>
         </Stack>
@@ -124,7 +124,7 @@ const FooterMobile: React.FC = () => {
             padding: "10px 32px",
           }}
         >
-          CTA - Entre em contato!
+          Entre em contato!
         </Button>
       </Box>
       <Box
@@ -140,9 +140,8 @@ const FooterMobile: React.FC = () => {
         <Box
           sx={{
             position: "absolute",
-            top: 10,
-            left: 0,
-            right: 10,
+            top: 5,
+            left: -25,
             padding: 3,
             color: "white",
             zIndex: 1,

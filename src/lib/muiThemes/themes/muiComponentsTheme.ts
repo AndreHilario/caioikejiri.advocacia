@@ -152,9 +152,10 @@ export const muiComponents = createTheme({
           borderRadius: "12px", 
           color: "#000",
           boxShadow: "0px 8px 16px rgba(255, 255, 255, 0.1)",
-          padding: "8px", 
-          backgroundColor: "#DEFEEF", 
+          padding: "6px", 
+          backgroundColor: "#fff", 
           overflow: "hidden",
+          border: "2px solid #34D399"
         },
         paperWidthSm: {
           maxWidth: "600px", 
