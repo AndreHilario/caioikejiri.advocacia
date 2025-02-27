@@ -85,9 +85,17 @@ const ServicesSection: React.FC = () => {
         minHeight: "80vh",
       }}
     >
-      <Typography variant="h3" gutterBottom color="#0e0e0e">
+      <Typography
+        variant="h3"
+        gutterBottom
+        color="#000"
+        sx={{
+          textShadow: '2px 2px 5px #A7F3D0', // Sombra verde
+        }}
+      >
         OUTROS SERVIÇOS PRESTADOS
       </Typography>
+
 
       <Grid container spacing={4} justifyContent="center" mt={1}>
         {services.map((service) => (
