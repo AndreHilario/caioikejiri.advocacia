@@ -28,35 +28,35 @@ const services: Service[] = [
     title: "Ações Indenizatórias",
     description:
       "Se você sofreu algum prejuízo material ou foi submetido a alguma situação que tenha ultrapassado o mero dissabor, poderá ser indenizado.",
-    icon: <GavelIcon style={{ color: "#FF0000", fontSize: "48px" }} />,
+    icon: <GavelIcon style={{ color: "#A7F3D0", fontSize: "48px" }} />,
   },
   {
     id: 2,
     title: "Indicação Judicial de Condutor",
     description:
       "Está sendo penalizado por infrações de trânsito que não cometeu, mas perdeu o prazo para recorrer? É possível solicitar a transferência da titularidade das infrações judicialmente!",
-    icon: <DriveEtaIcon style={{ color: "#FF0000", fontSize: "48px" }} />,
+    icon: <DriveEtaIcon style={{ color: "#A7F3D0", fontSize: "48px" }} />,
   },
   {
     id: 3,
     title: "Acidentes de Trânsito",
     description:
       "Além de pleitear danos materiais e morais, defendemos seus interesses na esfera criminal.",
-    icon: <CarCrashIcon style={{ color: "#FF0000", fontSize: "48px" }} />,
+    icon: <CarCrashIcon style={{ color: "#A7F3D0", fontSize: "48px" }} />,
   },
   {
     id: 4,
     title: "Inexigibilidade de ipva",
     description:
       "Se seu pedido de isenção foi injustamente negado ou se recebeu cobrança não estando mais na posse do veículo, o pedido poderá ser judicializado.",
-    icon: <FileCopyIcon style={{ color: "#FF0000", fontSize: "48px" }} />,
+    icon: <FileCopyIcon style={{ color: "#A7F3D0", fontSize: "48px" }} />,
   },
   {
     id: 5,
     title: "Defesa em ações de busca e apreensão",
     description:
       "Se o banco ajuizou ação de busca e apreensão do veículo, saiba que é possível reverter a situação caso tenha havido alguma nulidade.",
-    icon: <ReportProblemIcon style={{ color: "#FF0000", fontSize: "48px" }} />,
+    icon: <ReportProblemIcon style={{ color: "#A7F3D0", fontSize: "48px" }} />,
   },
 ];
 
@@ -98,7 +98,7 @@ const ServicesSection: React.FC = () => {
                 boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.1)",
                 borderRadius: "8px",
                 backgroundColor: "#000",
-                border: "2px groove #FFFFFF",
+                border: "2px groove #A7F3D0",
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",

@@ -10,12 +10,12 @@ const cardsData = [
     icon: <CheckIcon sx={{ fontSize: 36, color: "#34D399" }} />,
     title: "Análise Completa",
     description:
-      "Avaliação detalhada do contexto fático para identificar eventuais irregularidades na autuação.",
+      "Avaliação detalhada para identificar eventuais irregularidades na autuação.",
   },
   {
     icon: <PersonIcon sx={{ fontSize: 36, color: "#34D399" }} />,
     title: "Atendimento Personalizado",
-    description: "Soluções ajustadas às necessidades específicas do seu caso.",
+    description: "Soluções ajustadas às necessidades do seu caso.",
   },
   {
     icon: <AccessTimeIcon sx={{ fontSize: 36, color: "#34D399" }} />,

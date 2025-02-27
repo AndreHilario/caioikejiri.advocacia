@@ -89,7 +89,7 @@ const FooterDesktop: React.FC = () => {
 
         <Box sx={{ mt: "auto", pb: 1, width: "100%" }} textAlign="center">
           <Typography variant="caption" sx={{ color: "#A0A0A0" }}>
-            © 2025 AndreHilario | Todos os direitos reservados
+            © 2025 CaioIkejiri | Todos os direitos reservados
           </Typography>
         </Box>
       </Box>
@@ -109,7 +109,7 @@ const FooterMobile: React.FC = () => {
       }}
     >
       <Box sx={{ py: 4 }}>
-        <Typography variant="h4" sx={{ fontWeight: "bold", mb: 2, px: 4 }}>
+        <Typography variant="h4" sx={{ fontWeight: "bold", mb: 1, px: 4 }}>
           DEFENDA SEUS DIREITOS
         </Typography>
         <Button
@@ -121,7 +121,7 @@ const FooterMobile: React.FC = () => {
           }
           sx={{
             transition: "transform 0.2s ease-in-out",
-            padding: "10px 32px",
+            padding: "8px 32px",
           }}
         >
           Entre em contato!
@@ -131,7 +131,7 @@ const FooterMobile: React.FC = () => {
         sx={{
           position: "relative",
           width: "100%",
-          height: "45vh",
+          height: "30vh",
           overflow: "hidden",
           mb: 4,
           borderRadius: "10px",
@@ -140,15 +140,15 @@ const FooterMobile: React.FC = () => {
         <Box
           sx={{
             position: "absolute",
-            top: 5,
-            left: -25,
+            top: 80,
+            left: -30,
             padding: 3,
             color: "white",
             zIndex: 1,
             width: "75%",
           }}
         >
-          <Typography variant="subtitle1" sx={{ fontWeight: "bold" }}>
+          <Typography fontSize={"12px"} sx={{ fontWeight: "bold" }}>
             CAIO IKEJIRI | ADVOGADO
             <br />
             OAB/SP: 511.392
@@ -172,7 +172,7 @@ const FooterMobile: React.FC = () => {
         />
         <Stack direction="row" justifyContent="center" alignItems="center">
           <Typography variant="caption" sx={{ color: "#A0A0A0" }}>
-            © 2025 AndreHilario | Todos os direitos reservados
+            © 2025 CaioIkejiri | Todos os direitos reservados
           </Typography>
         </Stack>
       </Box>
