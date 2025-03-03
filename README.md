@@ -1,50 +1,37 @@
-# React + TypeScript + Vite
+# Landing Page - Profissional
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este é uma landing page moderna e responsiva, criada para destacar os serviços oferecidos e facilitar o conhecimento, acesso e contato dos clientes com o profissional.
 
-Currently, two official plugins are available:
+## Descrição do Projeto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+#### Tecnologias utilizadas:
 
-## Expanding the ESLint configuration
+- React;
+- Typescript;
+- Vite;
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+#### Funcionalidades do Site:
 
-- Configure the top-level `parserOptions` property like this:
+- **Apresentação de Serviços**: Detalhamento dos serviços específicos oferecidos pelo profissional, especializado na área desejada pelo cliente.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- **Botões de CTA (Call to Action)**: Estrategicamente posicionados para incentivar ações dos visitantes, como contato ou solicitação de consulta.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+- **Casos e Detalhamentos**: Seção dedicada para exibir resultados e detalhamento de cada possibiliade permitida pelos clientes que necessitam do serviço.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+#### Objetivos:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- **Estabelecer uma presença online profissional, customizável e confiável** para o profissional da área.
+
+- **Aumentar a visibilidade** do serviço do profissional e facilitar o acesso de potenciais clientes aos serviços oferecidos.
+
+- Tudo alinhado e customizável ao **desejo do profissional** que busca uma landing-page moderna e que cumpra seu papel eficazmente.
+
+## Autoria
+
+#### AndreHilario
+
+#### Para mais informações ou contato profissional:
+
+- **Email**: andre18hilario@gmail.com
+
+- **LinkedIn**: [Contato Profissional](https://www.linkedin.com/in/andr%C3%A9-hil%C3%A1rio)
