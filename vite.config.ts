@@ -7,6 +7,7 @@ export default defineConfig(() => {
     plugins: [react(), tailwindcss()],
     host: true,
     strictPort: true,
-    port: 3000
+    port: 3000,
+    base: "https://github.com/AndreHilario/caioikejiri.advocacia"
   };
 });
