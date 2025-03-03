@@ -3,13 +3,11 @@ import {
   Box,
   Button,
   Typography,
-  Divider,
   Stack,
   useMediaQuery,
   Theme,
 } from "@mui/material";
 import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
-import footerImage from "../assets/footerImage.jpg";
 
 const FooterDesktop: React.FC = () => {
   return (
@@ -17,25 +15,13 @@ const FooterDesktop: React.FC = () => {
       sx={{
         display: "flex",
         flexDirection: "row-reverse",
-        minHeight: "60vh",
+        minHeight: "40vh",
       }}
     >
       <Box
         sx={{
-          width: "40%",
-          minHeight: "60vh",
-          backgroundImage: `url(${footerImage})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-        }}
-      />
-
-      <Box
-        sx={{
-          width: "60%",
-          backgroundColor: "rgba(16, 16, 16, 1)",
-          // backgroundColor: "red",
+          width: "100%",
+          backgroundColor: "#000",
           color: "white",
           display: "flex",
           flexDirection: "column",
@@ -46,9 +32,8 @@ const FooterDesktop: React.FC = () => {
       >
         <Stack
           direction="row"
-          spacing={20}
           display={"flex"}
-          justifyContent="center"
+          justifyContent="space-around"
           alignItems="center"
           sx={{ width: "100%", mb: 3, flexGrow: 1 }}
         >
@@ -87,7 +72,16 @@ const FooterDesktop: React.FC = () => {
           </Box>
         </Stack>
 
-        <Box sx={{ mt: "auto", pb: 1, width: "100%" }} textAlign="center">
+        <Box sx={{ mb: 1, width: "100%" }} textAlign="center">
+          <Box
+            sx={{
+              height: 2,
+              width: "100%",
+              background:
+                "linear-gradient(to right, rgba(52, 211, 153, 0.2) 0%, #34D399 50%, rgba(52, 211, 153, 0.2) 100%)",
+              mb: 1,
+            }}
+          />
           <Typography variant="caption" sx={{ color: "#A0A0A0" }}>
             © 2025 CaioIkejiri | Todos os direitos reservados
           </Typography>
@@ -103,13 +97,13 @@ const FooterMobile: React.FC = () => {
       sx={{
         display: "flex",
         flexDirection: "column",
-        backgroundColor: "rgba(16, 16, 16, 1)",
+        backgroundColor: "#000",
         color: "white",
         textAlign: "center",
       }}
     >
       <Box sx={{ py: 4 }}>
-        <Typography variant="h4" sx={{ fontWeight: "bold", mb: 1, px: 4 }}>
+        <Typography variant="h4" sx={{ fontWeight: "bold", mb: 2, px: 4 }}>
           DEFENDA SEUS DIREITOS
         </Typography>
         <Button
@@ -127,48 +121,24 @@ const FooterMobile: React.FC = () => {
           Entre em contato!
         </Button>
       </Box>
-      <Box
-        sx={{
-          position: "relative",
-          width: "100%",
-          height: "30vh",
-          overflow: "hidden",
-          mb: 4,
-          borderRadius: "10px",
-        }}
-      >
-        <Box
-          sx={{
-            position: "absolute",
-            top: 80,
-            left: -30,
-            padding: 3,
-            color: "white",
-            zIndex: 1,
-            width: "75%",
-          }}
-        >
-          <Typography fontSize={"12px"} sx={{ fontWeight: "bold" }}>
+      <Box mb={3}>
+        <Box>
+          <Typography fontSize={"15px"} sx={{ fontWeight: "bold" }}>
             CAIO IKEJIRI | ADVOGADO
             <br />
             OAB/SP: 511.392
           </Typography>
         </Box>
-        <Box
-          sx={{
-            width: "100%",
-            height: "100%",
-            backgroundImage: `url(${footerImage})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-            zIndex: 0,
-          }}
-        />
       </Box>
       <Box sx={{ width: "100%", pb: 2 }}>
-        <Divider
-          sx={{ backgroundColor: "#34D399", mb: 2, width: "100%", mx: "auto" }}
+        <Box
+          sx={{
+            height: 2,
+            width: "100%",
+            background:
+              "linear-gradient(to right, rgba(52, 211, 153, 0.2) 0%, #34D399 50%, rgba(52, 211, 153, 0.2) 100%)",
+            mb: 1.5,
+          }}
         />
         <Stack direction="row" justifyContent="center" alignItems="center">
           <Typography variant="caption" sx={{ color: "#A0A0A0" }}>
