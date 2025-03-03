@@ -8,6 +8,6 @@ export default defineConfig(() => {
     host: true,
     strictPort: true,
     port: 3000,
-    base: "https://github.com/AndreHilario/caioikejiri.advocacia"
+    base: "/caioikejiri.advocacia/"
   };
 });
