@@ -14,7 +14,7 @@ export default defineConfig(() => {
     strictPort: true,
     port: 3000,
     build: {
-      outDir: 'dist', // Diretório de saída padrão, pode ser mantido
+      outDir: 'docs', // Diretório de saída padrão, pode ser mantido
       assetsDir: 'assets', // Opcional: diretório para assets (imagens, etc.)
       rollupOptions: {
         output: {
