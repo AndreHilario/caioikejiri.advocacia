@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://caioikejiriadv.vercel.app/sitemap.xml
