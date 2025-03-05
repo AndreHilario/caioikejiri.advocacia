@@ -4,7 +4,7 @@ import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig(() => {
   return {
-    base: "/caioikejiri.advocacia/",
+    base: "/dist/",
     plugins: [react(), tailwindcss()],
     strictPort: true,
     port: 3000,
