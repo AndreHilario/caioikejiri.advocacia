@@ -1,5 +1,6 @@
 import React from "react";
 import { Stack, Button, Typography } from "@mui/material";
+import { generateWhatsappLink } from "../../utils/sendWhatsAppMessage";
 
 const Header: React.FC = () => {
   return (
@@ -22,7 +23,10 @@ const Header: React.FC = () => {
 
         <Button
           variant="contained"
-          href="https://wa.me/5512997402160"
+          href={generateWhatsappLink(
+            "5512997402160",
+            "Olá! Preciso do auxílio de um Advogado."
+          )}
           rel="noopener noreferrer"
           sx={{
             padding: "8px 16px",
