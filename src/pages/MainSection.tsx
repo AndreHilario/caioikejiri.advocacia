@@ -19,6 +19,7 @@ import carrossel2HighRes from "../assets/carrossel2.jpg";
 import carrossel3HighRes from "../assets/carrossel3.jpg";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { generateWhatsappLink } from "../utils/sendWhatsAppMessage";
 
 const MainSectionDesktop: React.FC = () => {
   const slideDuration = 500;
@@ -101,21 +102,7 @@ const MainSectionDesktop: React.FC = () => {
                     textAlign: "center",
                   }}
                 >
-                  Defenda Seus Direitos no Trânsito
-                </Typography>
-              </Slide>
-
-              <Slide direction="left" in={true} timeout={slideDuration * 3}>
-                <Typography
-                  sx={{
-                    typography: "h3",
-                    color: "#6B7280",
-                    textAlign: "center",
-                    mt: 4,
-                  }}
-                >
-                  Recorra de Multas e das Penalidades de Suspensão <br />e de Cassação
-                  da CNH
+                  Defesa de Condutores e Proprietários de Veículos
                 </Typography>
               </Slide>
             </Box>
@@ -126,7 +113,10 @@ const MainSectionDesktop: React.FC = () => {
               >
                 <Button
                   variant="contained"
-                  href="https://wa.me/5512997402160"
+                  href={generateWhatsappLink(
+                    "5512997402160",
+                    "Olá! Preciso do auxílio de um Advogado."
+                  )}
                   rel="noopener noreferrer"
                   startIcon={<WhatsAppIcon />}
                   sx={{
@@ -204,20 +194,26 @@ const MainSectionMobile: React.FC = () => {
               typography: { xs: "h2", md: "h1" },
             }}
           >
-            Defenda Seus Direitos no Trânsito
+            Defesa de Condutores e Proprietários de Veículos
           </Typography>
         </Slide>
 
         <Slide direction="left" in={true} timeout={slideDuration * 3}>
-          <Typography
+          <Button
+            variant="contained"
+            href={generateWhatsappLink(
+              "5512997402160",
+              "Olá! Preciso do auxílio de um Advogado."
+            )}
+            rel="noopener noreferrer"
+            startIcon={<WhatsAppIcon />}
             sx={{
-              typography: { xs: "h6", md: "h3" },
-              color: "#6B7280",
+              transition: "transform 0.2s ease-in-out",
+              padding: "8px 32px",
             }}
           >
-            Recorra de Multas e das Penalidades de Suspensão e de Cassação da
-            CNH
-          </Typography>
+            Entre em contato!
+          </Button>
         </Slide>
 
         <Slide direction="right" in={true} timeout={slideDuration * 3}>
@@ -259,7 +255,10 @@ const MainSectionMobile: React.FC = () => {
           >
             <Button
               variant="contained"
-              href="https://wa.me/5512997402160"
+              href={generateWhatsappLink(
+                "5512997402160",
+                "Olá! Preciso do auxílio de um Advogado."
+              )}
               rel="noopener noreferrer"
               startIcon={<WhatsAppIcon />}
               sx={{

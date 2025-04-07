@@ -8,6 +8,7 @@ import {
   Theme,
 } from "@mui/material";
 import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
+import { generateWhatsappLink } from "../utils/sendWhatsAppMessage";
 
 const FooterDesktop: React.FC = () => {
   return (
@@ -54,7 +55,10 @@ const FooterDesktop: React.FC = () => {
             </Typography>
             <Button
               variant="contained"
-              href="https://wa.me/5512997402160"
+              href={generateWhatsappLink(
+                "5512997402160",
+                "Olá! Preciso do auxílio de um Advogado."
+              )}
               rel="noopener noreferrer"
               startIcon={
                 <ChatBubbleOutlineIcon
@@ -108,7 +112,10 @@ const FooterMobile: React.FC = () => {
         </Typography>
         <Button
           variant="contained"
-          href="https://wa.me/5512997402160"
+          href={generateWhatsappLink(
+            "5512997402160",
+            "Olá! Preciso do auxílio de um Advogado."
+          )}
           rel="noopener noreferrer"
           startIcon={
             <ChatBubbleOutlineIcon style={{ fontSize: 15, marginRight: 2 }} />
