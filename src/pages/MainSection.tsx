@@ -102,7 +102,7 @@ const MainSectionDesktop: React.FC = () => {
                     textAlign: "center",
                   }}
                 >
-                  Defesa de Condutores e Proprietários de Veículos
+                  Defesa de Condutores e de Proprietários de Veículos
                 </Typography>
               </Slide>
             </Box>
@@ -194,7 +194,7 @@ const MainSectionMobile: React.FC = () => {
               typography: { xs: "h2", md: "h1" },
             }}
           >
-            Defesa de Condutores e Proprietários de Veículos
+            Defesa de Condutores e de Proprietários de Veículos
           </Typography>
         </Slide>
 
