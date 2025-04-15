@@ -14,7 +14,9 @@ import GavelIcon from "@mui/icons-material/Gavel";
 import DriveEtaIcon from "@mui/icons-material/DriveEta";
 import FileCopyIcon from "@mui/icons-material/FileCopy";
 import ReportProblemIcon from "@mui/icons-material/ReportProblem";
-import CarCrashIcon from '@mui/icons-material/CarCrash';
+import CarCrashIcon from "@mui/icons-material/CarCrash";
+import ReportGmailerrorredIcon from '@mui/icons-material/ReportGmailerrorred';
+
 interface Service {
   id: number;
   title: string;
@@ -58,6 +60,13 @@ const services: Service[] = [
       "Se o banco ajuizou ação de busca e apreensão do veículo, saiba que é possível reverter a situação caso tenha havido alguma nulidade.",
     icon: <ReportProblemIcon style={{ color: "#A7F3D0", fontSize: "48px" }} />,
   },
+  {
+    id: 6,
+    title: "Cadastro Fraudulento em Aplicativos de Transporte",
+    description:
+      "Se você foi se cadastrar em algum aplicativo de transporte, mas teve o pedido recusado por haver uma conta anterior não autorizada, é possível pedir a liberação e também uma indenização.",
+    icon: <ReportGmailerrorredIcon style={{ color: "#A7F3D0", fontSize: "48px" }} />,
+  },
 ];
 
 const ServicesSection: React.FC = () => {
@@ -77,12 +86,11 @@ const ServicesSection: React.FC = () => {
   return (
     <Box
       sx={{
-        py: 4,
+        py: 6,
         px: 4,
         background: "linear-gradient(to right, #000, #fff)",
-        // backgroundColor: "#E0F7FA",
         textAlign: "center",
-        minHeight: "80vh",
+        minHeight: "85vh",
       }}
     >
       <Typography
@@ -90,16 +98,21 @@ const ServicesSection: React.FC = () => {
         gutterBottom
         color="#000"
         sx={{
-          textShadow: '2px 2px 5px #A7F3D0', // Sombra verde
+          textShadow: "2px 2px 5px #A7F3D0", // Sombra verde
         }}
       >
         OUTROS SERVIÇOS PRESTADOS
       </Typography>
 
-
       <Grid container spacing={4} justifyContent="center" mt={1}>
         {services.map((service) => (
-          <Grid key={service.id} item xs={12} sm={6} md={4} lg={3}>
+          <Grid
+            key={service.id}
+            item
+            xs={12}
+            sm={6}
+            md={4} 
+          >
             <Box
               sx={{
                 p: 3,
