@@ -10,13 +10,7 @@ import {
   Grid,
 } from "@mui/material";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
-import Slider from "react-slick";
-import carrossel1 from "../assets/carrossel1.jpg";
-import carrossel2 from "../assets/carrossel2.jpg";
-import carrossel3 from "../assets/carrossel3.jpg";
-import carrossel1HighRes from "../assets/carrossel1.jpg";
-import carrossel2HighRes from "../assets/carrossel2.jpg";
-import carrossel3HighRes from "../assets/carrossel3.jpg";
+import image1 from "../assets/image1.jpeg";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { generateWhatsappLink } from "../utils/sendWhatsAppMessage";
@@ -24,47 +18,21 @@ import { generateWhatsappLink } from "../utils/sendWhatsAppMessage";
 const MainSectionDesktop: React.FC = () => {
   const slideDuration = 500;
 
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 4000,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 5000,
-    pauseOnHover: false,
-    arrows: false,
-    adaptiveHeight: true,
-  };
-
   return (
-    <Box className="bg-white" sx={{ height: "92vh", overflow: "hidden" }}>
+    <Box className="bg-white" sx={{ height: "100vh", overflow: "hidden" }}>
       <Grid container spacing={0} sx={{ height: "100%" }}>
         <Grid item xs={12} md={6} className="flex justify-center">
           <Box className="w-full h-full">
-            <Slider {...settings}>
-              {[carrossel1, carrossel2, carrossel3].map((image, index) => (
-                <div key={index} className="flex justify-center items-center">
-                  <img
-                    src={image}
-                    srcSet={`${image} 1x, ${
-                      index === 0
-                        ? carrossel1HighRes
-                        : index === 1
-                        ? carrossel2HighRes
-                        : carrossel3HighRes
-                    } 2x`}
-                    alt={`Imagem ${index + 1}`}
-                    style={{
-                      width: "100%",
-                      height: "92vh",
-                      objectFit: "cover",
-                      borderRadius: "4px",
-                    }}
-                  />
-                </div>
-              ))}
-            </Slider>
+            <img
+              src={image1}
+              alt="Imagem principal"
+              style={{
+                width: "100%",
+                height: "100vh",
+                objectFit: "cover",
+                borderRadius: "4px",
+              }}
+            />
           </Box>
         </Grid>
         <Grid
@@ -134,8 +102,7 @@ const MainSectionDesktop: React.FC = () => {
                     mt: 2,
                   }}
                 >
-                  Seu caso será analisado e você saberá se será possível
-                  recorrer.
+                  Saiba qual a melhor solução para o seu caso!
                 </Typography>
               </Box>
             </Slide>
@@ -148,19 +115,6 @@ const MainSectionDesktop: React.FC = () => {
 
 const MainSectionMobile: React.FC = () => {
   const slideDuration = 500;
-
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 4000,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 5000,
-    pauseOnHover: false,
-    arrows: false,
-    adaptiveHeight: true,
-  };
 
   return (
     <Box
@@ -217,34 +171,17 @@ const MainSectionMobile: React.FC = () => {
         </Slide>
 
         <Slide direction="right" in={true} timeout={slideDuration * 3}>
-          <Box sx={{ maxWidth: "95%", margin: "auto", mt: 5 }}>
-            <Slider {...settings}>
-              {[carrossel1, carrossel2, carrossel3].map((image, index) => (
-                <div
-                  key={index}
-                  style={{ display: "flex", justifyContent: "center" }}
-                >
-                  <img
-                    src={image}
-                    srcSet={`${image} 1x, ${
-                      index === 0
-                        ? carrossel1HighRes
-                        : index === 1
-                        ? carrossel2HighRes
-                        : carrossel3HighRes
-                    } 2x`}
-                    alt={`Imagem ${index + 1}`}
-                    style={{
-                      width: "100%",
-                      borderRadius: "8px",
-                      objectFit: "cover",
-                      height: "50vh",
-                    }}
-                  />
-                  <Typography overflow={"hidden"}>. . .</Typography>
-                </div>
-              ))}
-            </Slider>
+          <Box sx={{ width: "100%", margin: "auto", mt: 5 }}>
+            <img
+              src={image1}
+              alt="Imagem principal"
+              style={{
+                width: "100%",
+                borderRadius: "8px",
+                objectFit: "cover",
+                height: "50vh",
+              }}
+            />
           </Box>
         </Slide>
 
@@ -276,7 +213,7 @@ const MainSectionMobile: React.FC = () => {
                 mt: 2,
               }}
             >
-              Seu caso será analisado e você saberá se será possível recorrer.
+              Saiba qual a melhor solução para o seu caso!
             </Typography>
           </Box>
         </Slide>
