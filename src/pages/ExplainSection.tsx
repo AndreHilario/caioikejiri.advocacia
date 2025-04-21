@@ -1,7 +1,7 @@
 import React from "react";
 import { Typography, Stack, Grid } from "@mui/material";
 import { CheckCircle, AccessTime, DocumentScanner } from "@mui/icons-material";
-import image from "../assets/explainImage.jpg";
+import image from "../assets/explainImage.jpeg";
 
 const ExplainSection: React.FC = () => {
   return (
@@ -46,25 +46,23 @@ const ExplainSection: React.FC = () => {
           <Stack direction="row" spacing={2} alignItems="center">
             <CheckCircle sx={{ color: "#34D399", fontSize: 30 }} />
             <Typography variant="body1" sx={{ color: "#FFFFFF" }}>
-              Se você foi surpreendido por uma multa de trânsito ou foi
-              notificado sobre a suspensão ou cassação da sua CNH, saiba que
-              muitas vezes é possível recorrer.
+              Se você foi surpreendido com uma busca e apreensão, está pagando
+              juros altos no seu financiamento, sofreu um acidente por conta de
+              um objeto na pista etc., entre em contato!
             </Typography>
           </Stack>
 
           <Stack direction="row" spacing={2} alignItems="center">
             <DocumentScanner sx={{ color: "#34D399", fontSize: 30 }} />
             <Typography variant="body1" sx={{ color: "#FFFFFF" }}>
-              Você envia o AIT (Auto de Infração de Trânsito) ou a Notificação
-              de Penalidade e explica brevemente sua situação.
+              Explique sua situação e seu caso será cuidadosamente analisado.
             </Typography>
           </Stack>
 
           <Stack direction="row" spacing={2} alignItems="center">
             <AccessTime sx={{ color: "#34D399", fontSize: 30 }} />
             <Typography variant="body1" sx={{ color: "#FFFFFF" }}>
-              Em pouco tempo receberá uma devolutiva e saberá se sua multa
-              poderá ser anulada.
+              Em pouco tempo, você receberá uma devolutiva com a melhor solução.
             </Typography>
           </Stack>
         </Stack>
@@ -80,9 +78,9 @@ const ExplainSection: React.FC = () => {
           src={image}
           alt="Ilustração de trânsito"
           style={{
-            maxWidth: "100%",
-            height: "100%",
-            borderRadius: "8px",
+            width: "100%",
+            objectFit: "cover",
+            borderRadius: "4px",
           }}
         />
       </Grid>

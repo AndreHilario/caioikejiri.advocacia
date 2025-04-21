@@ -10,7 +10,7 @@ const cardsData = [
     icon: <CheckIcon sx={{ fontSize: 36, color: "#34D399" }} />,
     title: "Análise Completa",
     description:
-      "Avaliação detalhada para identificar eventuais irregularidades na autuação.",
+      "Análise minuciosa para que você resolva seu problema da melhor forma possível.",
   },
   {
     icon: <PersonIcon sx={{ fontSize: 36, color: "#34D399" }} />,
@@ -50,7 +50,7 @@ const FeaturesSection: React.FC = () => {
             sx={{
               display: "flex",
               justifyContent: "center",
-              alignItems: "center"
+              alignItems: "center",
             }}
           >
             <Box
@@ -67,13 +67,13 @@ const FeaturesSection: React.FC = () => {
                   boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
                 },
                 width: "100%",
-                minHeight: "30vh"
+                minHeight: "30vh",
               }}
             >
               <Box
                 sx={{
                   mb: 2,
-                  color: "#34D399"
+                  color: "#34D399",
                 }}
               >
                 {card.icon}

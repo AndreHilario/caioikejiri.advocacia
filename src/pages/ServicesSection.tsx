@@ -15,7 +15,8 @@ import DriveEtaIcon from "@mui/icons-material/DriveEta";
 import FileCopyIcon from "@mui/icons-material/FileCopy";
 import ReportProblemIcon from "@mui/icons-material/ReportProblem";
 import CarCrashIcon from "@mui/icons-material/CarCrash";
-import ReportGmailerrorredIcon from '@mui/icons-material/ReportGmailerrorred';
+import ReportGmailerrorredIcon from "@mui/icons-material/ReportGmailerrorred";
+import DataThresholdingIcon from "@mui/icons-material/DataThresholding";
 
 interface Service {
   id: number;
@@ -65,7 +66,18 @@ const services: Service[] = [
     title: "Cadastro Fraudulento em Aplicativos de Transporte",
     description:
       "Se você foi se cadastrar em algum aplicativo de transporte, mas teve o pedido recusado por haver uma conta anterior não autorizada, é possível pedir a liberação e também uma indenização.",
-    icon: <ReportGmailerrorredIcon style={{ color: "#A7F3D0", fontSize: "48px" }} />,
+    icon: (
+      <ReportGmailerrorredIcon style={{ color: "#A7F3D0", fontSize: "48px" }} />
+    ),
+  },
+  {
+    id: 7,
+    title: "Ação Revisional de Juros",
+    description:
+      "Revise contratos com taxas abusivas e garanta a correção dos valores cobrados.",
+    icon: (
+      <DataThresholdingIcon style={{ color: "#A7F3D0", fontSize: "48px" }} />
+    ),
   },
 ];
 
@@ -99,20 +111,15 @@ const ServicesSection: React.FC = () => {
         color="#000"
         sx={{
           textShadow: "2px 2px 5px #A7F3D0", // Sombra verde
+          textTransform: "uppercase",
         }}
       >
-        OUTROS SERVIÇOS PRESTADOS
+        Portifólio de Serviços
       </Typography>
 
       <Grid container spacing={4} justifyContent="center" mt={1}>
         {services.map((service) => (
-          <Grid
-            key={service.id}
-            item
-            xs={12}
-            sm={6}
-            md={4} 
-          >
+          <Grid key={service.id} item xs={12} sm={6} md={4}>
             <Box
               sx={{
                 p: 3,
