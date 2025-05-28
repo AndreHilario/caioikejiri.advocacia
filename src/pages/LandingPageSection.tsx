@@ -51,12 +51,16 @@ export const LandingPageSection = () => {
   return (
     <Box
       sx={{
-        minHeight: "88vh",
-        backgroundColor: "#f8f6f2",
+        minHeight: "100vh", // garante que a altura seja da viewport inteira
+        backgroundColor: "#FFFFF0",
         py: { xs: 5, md: 12 },
         px: { xs: 2, sm: 3, md: 5 },
         overflowX: "hidden",
         boxSizing: "border-box",
+        display: "flex", // necessário para centralização vertical
+        alignItems: "center",
+        justifyContent: "center",
+        flexDirection: "column", // organiza os filhos em coluna
         transition: "background 0.3s",
       }}
     >
@@ -76,17 +80,27 @@ export const LandingPageSection = () => {
                 sx={{
                   borderRadius: 3,
                   p: 0,
-                  boxShadow: isOpen ? 8 : 2,
+                  boxShadow: isOpen ? 8 : 4,
                   background: isOpen
                     ? "linear-gradient(135deg, #0B3B60 65%, #3383A2 100%)"
-                    : "linear-gradient(135deg, #F1F2F6 80%, #E4E7EC 100%)",
+                    : "linear-gradient(135deg, #FAFAFA 80%, #F0F1F3 100%)",
                   position: "relative",
                   height: isOpen ? "auto" : 180,
-                  transition: "all 0.3s cubic-bezier(0.4, 1.2, 0.2, 1)",
+                  transition: "all 0.35s cubic-bezier(0.4, 1.2, 0.2, 1)",
                   width: "100%",
                   boxSizing: "border-box",
                   mx: { xs: 0, sm: 0.5 },
-                  mt: 1.5
+                  mt: 1.5,
+                  overflow: "hidden",
+                  border: isOpen ? "none" : "1px solid #1A304D",
+                  "&:hover": {
+                    boxShadow: isOpen ? 10 : 6,
+                    transform: isOpen ? "scale(1.00)" : "scale(1.01)",
+                    transition: "all 0.25s ease-in-out",
+                  },
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
                 }}
               >
                 <Box
@@ -191,7 +205,7 @@ export const LandingPageSection = () => {
         sx={{
           display: "flex",
           justifyContent: "center",
-          mt: { xs: 6, md: 20 },
+          mt: { xs: 6, md: 12 },
           px: { xs: 1, sm: 2 },
         }}
       >
