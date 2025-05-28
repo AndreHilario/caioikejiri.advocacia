@@ -80,7 +80,7 @@ export const LandingPageSection = () => {
                 sx={{
                   borderRadius: 3,
                   p: 0,
-                  boxShadow: isOpen ? 8 : 4,
+                  boxShadow: isOpen ? 8 : 6,
                   background: isOpen
                     ? "linear-gradient(135deg, #0B3B60 65%, #3383A2 100%)"
                     : "linear-gradient(135deg, #FAFAFA 80%, #F0F1F3 100%)",
