@@ -10,14 +10,14 @@ const Header: React.FC = () => {
         position: "sticky",
         top: 0,
         zIndex: 1000,
-        backgroundColor: "#1A304D"
+        backgroundColor: "#1A304D",
       }}
     >
       <Stack
         direction="row"
         alignItems="center"
         justifyContent="space-between"
-        className="max-w-7xl mx-auto py-1 px-1"
+        className="max-w-7xl mx-auto py-1 px-2"
         color="#FFFFFF"
       >
         {/* Logo Responsiva */}
@@ -28,8 +28,12 @@ const Header: React.FC = () => {
           sx={{
             p: 0.5,
             height: "auto",
-            width: 220,
-            objectFit: "contain"
+            width: {
+              xs: 130, // largura para telas pequenas (ex: celulares)
+              sm: 170, // telas pequenas a médias
+              md: 220, // telas médias para cima
+            },
+            objectFit: "contain",
           }}
         />
 
