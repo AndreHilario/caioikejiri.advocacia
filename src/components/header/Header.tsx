@@ -1,7 +1,7 @@
 import React from "react";
 import { Stack, Button, Box } from "@mui/material";
 import { generateWhatsappLink } from "../../utils/sendWhatsAppMessage";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/logo2.png";
 
 const Header: React.FC = () => {
   return (
@@ -17,7 +17,7 @@ const Header: React.FC = () => {
         direction="row"
         alignItems="center"
         justifyContent="space-between"
-        className="max-w-7xl mx-auto py-1 px-2"
+        className="max-w-7xl mx-auto py-1 px-1"
         color="#FFFFFF"
       >
         {/* Logo Responsiva */}
@@ -27,8 +27,8 @@ const Header: React.FC = () => {
           alt="Logo Caio Ikejiri"
           sx={{
             p: 0.5,
-            height: 100,
-            width: 100,
+            height: "auto",
+            width: 220,
             objectFit: "contain"
           }}
         />
