@@ -111,7 +111,7 @@ export const muiComponents = createTheme({
     MuiButton: {
       styleOverrides: {
         root: {
-          backgroundColor: "#34D399",
+          backgroundColor: "#25D366", // Cor do WhatsApp
           borderRadius: "20px",
           fontSize: "14px",
           letterSpacing: "0.01px",
@@ -119,7 +119,7 @@ export const muiComponents = createTheme({
           transition:
             "transform 0.2s ease-in-out, background-color 0.2s ease-in-out",
           "&:hover": {
-            backgroundColor: "#A7F3D0",
+            backgroundColor: "#1DA851", // Versão mais clara/escura para hover
           },
           whiteSpace: "nowrap",
           textTransform: "none",
@@ -146,22 +146,22 @@ export const muiComponents = createTheme({
     MuiDialog: {
       styleOverrides: {
         root: {
-          zIndex: 1300, 
+          zIndex: 1300,
         },
         paper: {
-          borderRadius: "12px", 
+          borderRadius: "12px",
           color: "#000",
           boxShadow: "0px 8px 16px rgba(255, 255, 255, 0.1)",
-          padding: "6px", 
-          backgroundColor: "#fff", 
+          padding: "6px",
+          backgroundColor: "#fff",
           overflow: "hidden",
-          border: "2px solid #34D399"
+          border: "2px solid #34D399",
         },
         paperWidthSm: {
-          maxWidth: "600px", 
+          maxWidth: "600px",
         },
         paperFullWidth: {
-          padding: "24px", 
+          padding: "24px",
         },
       },
     },

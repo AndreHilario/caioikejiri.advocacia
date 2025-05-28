@@ -1,9 +1,5 @@
 import Header from "./components/header/Header";
-import ExplainSection from "./pages/ExplainSection";
-import FeaturesSection from "./pages/FeaturesSection";
-import Footer from "./pages/Footer";
-import MainSection from "./pages/MainSection";
-import ServicesSection from "./pages/ServicesSection";
+import { LandingPageSection } from "./pages/LandingPageSection";
 import { MuiThemeProvider } from "./providers/MuiThemeProvider";
 
 function App() {
@@ -11,11 +7,12 @@ function App() {
     <MuiThemeProvider>
       <>
         <Header />
-        <MainSection />
+        {/* <MainSection />
         <ExplainSection />
         <ServicesSection />
         <FeaturesSection />
-        <Footer />
+        <Footer /> */}
+        <LandingPageSection />
       </>
     </MuiThemeProvider>
   );
