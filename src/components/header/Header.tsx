@@ -1,25 +1,37 @@
 import React from "react";
-import { Stack, Button, Typography } from "@mui/material";
+import { Stack, Button, Box } from "@mui/material";
 import { generateWhatsappLink } from "../../utils/sendWhatsAppMessage";
+import logo from "../../assets/logo.png";
 
 const Header: React.FC = () => {
   return (
     <div
-      className="bg-black py-2 px-2 border-b-2 border-b-green-300"
       style={{
         position: "sticky",
         top: 0,
         zIndex: 1000,
+        backgroundColor: "#1A304D"
       }}
     >
       <Stack
         direction="row"
         alignItems="center"
         justifyContent="space-between"
-        className="max-w-7xl mx-auto py-1"
+        className="max-w-7xl mx-auto py-1 px-2"
         color="#FFFFFF"
       >
-        <Typography variant="h6">Caio Ikejiri | Advogado</Typography>
+        {/* Logo Responsiva */}
+        <Box
+          component="img"
+          src={logo}
+          alt="Logo Caio Ikejiri"
+          sx={{
+            p: 0.5,
+            height: { xs: 54, sm: 80, md: 100 },
+            width: { xs: 54, sm: 80, md: 100 },
+            objectFit: "contain"
+          }}
+        />
 
         <Button
           variant="contained"
