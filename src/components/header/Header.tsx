@@ -27,8 +27,8 @@ const Header: React.FC = () => {
           alt="Logo Caio Ikejiri"
           sx={{
             p: 0.5,
-            height: { xs: 54, sm: 80, md: 100 },
-            width: { xs: 54, sm: 80, md: 100 },
+            height: 100,
+            width: 100,
             objectFit: "contain"
           }}
         />
